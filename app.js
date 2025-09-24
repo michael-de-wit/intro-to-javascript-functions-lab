@@ -1,3 +1,5 @@
+// Exercises 1-9
+
 /*
 Exercise 1: maxOfTwoNumbers()
 
@@ -220,3 +222,65 @@ function basicCalculator(num1,num2,operation) {
 }
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+
+// Level up exercises
+
+/*
+Exercise 10: calculateGrade()
+
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+function calculateGrade(numericalScore) {
+  if(numericalScore >= 90) {
+    return `A`
+  } else if(numericalScore >= 80 && numericalScore <= 89) {
+    return `B`
+  } else if(numericalScore >= 70 && numericalScore <= 79) {
+    return `C`
+  } else if(numericalScore >= 60 && numericalScore <= 69) {
+    return `D`
+  } else if(numericalScore <= 59) {
+    return `F`
+  }
+} 
+
+console.log('Exercise 10 Result:', calculateGrade(0));
+
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+function createUsername(firstName, lastName) {
+  let firstNameFirst3 = firstName.substring(0,3) //First 3 chars of first name
+  let lastNameFirst3 = lastName.substring(0,3) //First 3 chars of last name
+
+  let fullNameConcat = firstName + lastName // Concat the first and last name
+  let nameLength = fullNameConcat.length // Get length of full name concat
+  // console.log(fullNameConcat,firstNameFirst3, lastNameFirst3, nameLength)
+  return firstNameFirst3 + lastNameFirst3 + nameLength
+}
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Greene"));
