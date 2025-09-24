@@ -29,6 +29,13 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
+/**
+ * isAdult
+ * Enter age; returns `Adult` if >=18 or `Minor' if <18
+ *
+ * @param {number} age - Enter age as a number
+ */
+
 function isAdult(age) {
     if(age>=18) {
         return `Adult`
@@ -52,6 +59,12 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
+/**
+ * Enter a string; returns true if `a`,`e`,`i`,`o`,`u`
+ *
+ * @param {string} charToCheck - Enter a character
+ */
+
 function isCharAVowel(charToCheck) {
   if([`a`,`e`,`i`,`o`,`u`].includes(charToCheck)) {
     return true
@@ -64,7 +77,7 @@ function isCharAVowel(charToCheck) {
 //   }
 }
 
-console.log('Exercise 3 Result:', isCharAVowel("u2"));
+console.log('Exercise 3 Result:', isCharAVowel(`a`));
 
 
 /*
@@ -79,12 +92,21 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 
+/**
+ * Enter your name and domain to create an email in the format [name]@[domain]
+ * @param {string} name Enter name as a string
+ * @param {string} domain Enter domain in the format {@link greetUser} `example.com` 
+ * @return {string} email in the format `name [at] example.com`
+ * @example generateEmail(`John`,`example.com`)
+ * @see {@link maxOfThree}
+ *
+ */
+
 function generateEmail(name,domain) {
   return `${name}@${domain}`
 }
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
-
 
 /*
 Exercise 5: greetUser()
